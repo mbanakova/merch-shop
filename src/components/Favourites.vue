@@ -5,7 +5,7 @@
 			bg-white
 			z-10
 			p-4
-			min-w-min
+			w-96
 			text-gray-900
 			min-h-screen
 			top-0

@@ -29,15 +29,10 @@
 </template>
 
 <script setup>
-import { computed, defineProps } from "vue";
+import { computed } from "vue";
 
-const props = defineProps({
+const props = {
 	name: {
-		type: String,
-		required: true,
-	},
-	type: {
-		type: String,
 		required: true,
 	},
 	alt: {
@@ -48,7 +43,7 @@ const props = defineProps({
 		type: Boolean,
 		required: false,
 	},
-});
+};
 const name = computed(() => {
 	return `${props.name}`;
 });

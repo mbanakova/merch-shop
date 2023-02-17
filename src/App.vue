@@ -1,7 +1,7 @@
 <template>
 	<Sprite />
 	<TheHeader />
-	<main class="container p-4 px-5 mx-auto flex-grow">
+	<main class="container p-4 px-5 mx-auto flex flex-col flex-grow">
 		<router-view />
 	</main>
 	<Favourites />

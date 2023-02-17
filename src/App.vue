@@ -13,7 +13,6 @@ import TheFooter from "./components/TheFooter";
 import Favourites from "./components/Favourites";
 import Sprite from "./components/Sprite";
 import { useMenuStore } from "./pinia/menuStore";
-// import { useFavouritesStore } from "./../pinia/favouritesStore";
 
 const store = useMenuStore();
 store.checkScreenWidth(); // контролирует бургер-меню и body-scroll-lock при открытом меню

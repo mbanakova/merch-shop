@@ -63,8 +63,8 @@
 							"
 						/>
 					</router-link>
-					<router-link to="/favourites" @click="store.toggleMenu()"
-						><svg-icon
+					<button @click="store.toggleMenu()">
+						<svg-icon
 							name="favourites"
 							class="
 								w-20
@@ -75,7 +75,7 @@
 								transition-all
 							"
 						/>
-					</router-link>
+					</button>
 				</div>
 			</nav>
 		</section>

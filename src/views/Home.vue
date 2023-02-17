@@ -107,16 +107,4 @@ import { useFavouritesStore } from "./../pinia/favouritesStore";
 const productsStore = useProductsStore();
 const favouritesStore = useFavouritesStore();
 const products = productsStore.products;
-// const favourites = favouritesStore.favourites;
-
-// const addToFavourites = (item) => {
-// 	const fav = {
-// 		id: item.id,
-// 		title: item.title,
-// 		price: item.price,
-// 		size: item.size,
-// 	};
-
-// 	console.log(fav);
-// };
 </script>

@@ -16,16 +16,21 @@
 					class="w-10 h-10 p-2 text-gray-300 hover:text-white transition-all"
 				/>
 			</router-link>
-			<button class="relative">
+			<button
+				class="relative"
+				:class="{ 'text-red-600': hasFavs }"
+				@click="favouritesStore.toggleFavourites()"
+			>
 				<svg-icon
 					name="favourites"
-					class="w-10 h-10 p-2 text-gray-300 hover:text-white transition-all"
+					class="w-10 h-10 p-2 hover:text-white transition-all"
 				/>
 				<span
-					v-if="favourites.length > 0"
+					v-if="hasFavs"
 					class="
 						bg-gray-600
 						rounded-full
+						text-white
 						w-4
 						h-4
 						absolute
@@ -33,8 +38,9 @@
 						top-0
 						right-0
 						text-xs
+						transition-all
 					"
-					>{{ favourites.length }}</span
+					>{{ favouritesQuantity }}</span
 				>
 			</button>
 		</div>
@@ -42,10 +48,18 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 import SvgIcon from "./SvgIcon";
 import { useMenuStore } from "./../pinia/menuStore";
 import { useFavouritesStore } from "./../pinia/favouritesStore";
 const store = useMenuStore();
 const favouritesStore = useFavouritesStore();
-const favourites = favouritesStore.favourites;
+
+const hasFavs = computed(function () {
+	return favouritesStore.hasFavourites;
+});
+
+const favouritesQuantity = computed(function () {
+	return favouritesStore.getFavouritesQuantiity;
+});
 </script>
